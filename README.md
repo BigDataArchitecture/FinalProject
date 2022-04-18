@@ -1,2 +1,4 @@
 # FinalProject
-News Tracker
+One Place All News!
+
+
