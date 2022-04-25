@@ -44,4 +44,4 @@ The Pre Processor module performs various NLP tasks that include tokenization, d
 #### Value: After all preprocessing the value is what customers will look on screen
 
  # Our Processor Module:
- <img align="right" alt="GIF" src="Images/Processor_module.jpg" width="300" height="200" />
+ <img alt="GIF" src="Images/Processor_module.jpg" width="1000" height="600" />
