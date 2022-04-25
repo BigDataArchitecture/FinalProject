@@ -42,3 +42,6 @@ The Pre Processor module performs various NLP tasks that include tokenization, d
 #### Veracity: Our preprocessor module will keep a check on veracity
 
 #### Value: After all preprocessing the value is what customers will look on screen
+
+ # Our Processor Module:
+ <img align="right" alt="GIF" src="Images/Processor_module.jpg" width="300" height="200" />
