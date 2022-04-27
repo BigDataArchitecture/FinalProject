@@ -7,8 +7,8 @@ print(client["UserData"])
 db = client["UserData"]
 collection = db["Google_News"]
 
-tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert",max_length=512)
-model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert")
+tokenizer = AutoTokenizer.from_pretrained("finiteautomata/bertweet-base-sentiment-analysis",max_length=512)
+model = AutoModelForSequenceClassification.from_pretrained("finiteautomata/bertweet-base-sentiment-analysis")
 nlp = pipeline("sentiment-analysis", model = model, tokenizer=tokenizer)
 news_text = []
 a = collection.find()
