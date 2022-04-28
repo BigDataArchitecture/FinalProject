@@ -45,3 +45,8 @@ The Pre Processor module performs various NLP tasks that include tokenization, d
 
  # Our Processor Module:
  <img alt="GIF" src="Images/Processor_module.jpg" width="1000" height="600" />
+ 
+ 
+ 
+ # References:
+ Sentiment Analysis: https://arxiv.org/pdf/2007.02238.pdf
