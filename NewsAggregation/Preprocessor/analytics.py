@@ -39,11 +39,11 @@ def analytics(user1):
 
     with fig_col1:
         st.markdown("#### Keywords Searched")
-        fig2 = px.histogram(data_frame=user_data[user_data['user_id'] == user], x="keywords")
+        fig2 = px.histogram(user1, x="keywords")
         st.write(fig2)
     
     st.markdown('##### Sentiments of keywords searched')
-    fig = px.line(user_data[user_data['user_id'] == user], 
+    fig = px.line(user1, 
     x = "sentiment", y = "count", title = user)
     st.plotly_chart(fig)
         
