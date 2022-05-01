@@ -1,0 +1,7 @@
+﻿user_id,keywords,count,sentiment,date,location
+user1,musk,2,positive,4/25/2022,USA
+user1,musk,2,positive,4/25/2022,USA
+user1,tesla,2,positive,4/26/2022,USA
+user1,bitcoin,1,neutral,4/27/2022,Australia
+user1,IPL,1,negative,4/27/2022,India
+user2,BJP,2,positive,4/28/2022,India
