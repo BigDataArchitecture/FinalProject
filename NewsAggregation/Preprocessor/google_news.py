@@ -9,22 +9,21 @@ from tweets import extract_tweets
 nltk.download('punkt')
 from newspaper import Article
 
-# Topics = ['Business','World','Nation','Business','Technology','Entertainment','Sports','Science','Health']
-# Country = ['Australia','Canada ','India ', 'New Zealand', 'Nigeria', 'Pakistan', 'Africa', 
-# 'United Kingdom', 'United States','France','Brazil','Russia', 'Ukraine','United Arab Emirates','China', 'Taiwan', 
-#            'Hong Kong', 'Japan', 'Republic of Korea']
-
-Topics = ['Business']
-Country = ['Australia']
+Topics = ['Business','World','Nation','Business','Technology','Entertainment','Sports','Science','Health']
+Country = ['Australia','Canada ','India ', 'New Zealand', 'Nigeria', 'Pakistan', 'Africa', 
+'United Kingdom', 'United States','France','Brazil','Russia', 'Ukraine','United Arab Emirates','China', 'Taiwan', 
+           'Hong Kong', 'Japan', 'Republic of Korea']
 
 client = pymongo.MongoClient("mongodb+srv://team3:qHovInc8WtqPBs7k@newsmonitor.uzcq9.mongodb.net/UserData?retryWrites=true&w=majority")
-print(client["UserData"])
-db = client["UserData"]
-collection = db["Google_News_new"]
+print(client["News"])
+db = client["News"]
+collection = db["GoogleAPI"]
 
 def remove(string):
     return string.replace(" ", "")
 
+insert = 0
+not_insert = 0
 # ##Insert into a collection
 for i in Topics:
     for j in Country:
@@ -36,7 +35,8 @@ for i in Topics:
                 article.download()
                 article.parse()
                 article.nlp()
-                print(article.summary,article.title)
+                keywords = keyword_gen(article.summary)
+                tweets = extract_tweets(keywords)
                 collection.insert_one({
                 "news_title":article.title,
                 "news_data":article.publish_date,
@@ -47,11 +47,16 @@ for i in Topics:
                 "news_topic": i, #Putting news topic
                 "news_Country": j, #puting news country
                 "news_source": remove(a[k]['title'].split("-",1)[1]), #putting news source
-                "news_keywords":article.keywords,
-                "news_sentiments":sentiments_analysis(article.summary)})
-                print("Inserted",article.publish_date)
+                "news_keywords":keywords,
+                "news_sentiments":sentiments_analysis(article.summary),
+                "news_tweets": tweets})
+                insert = insert + 1
+                print("Inserted",insert)
+                # print("Inserted",article.publish_date)
             except:
-                print("Cannot do NLP on this:",a[k]['link'] )
+                not_insert = not_insert + 1
+                print("Cannot do NLP",not_insert)
+print("Inserted:",insert, "Not Inserted:",not_insert)
 
 
             

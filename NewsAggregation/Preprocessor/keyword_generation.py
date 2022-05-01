@@ -1,4 +1,5 @@
 from keybert import KeyBERT
+from pandas import DataFrame
 
 
 def load_model():
@@ -12,4 +13,9 @@ def keyword_gen(doc):
     use_mmr=True,
     stop_words="english",
     top_n=10)
-    return keywords
+
+    df = (DataFrame(keywords, columns=["Keyword/Keyphrase", "Relevancy"])
+        .sort_values(by="Relevancy", ascending=False)
+        .reset_index(drop=True))
+
+    return df['Keyword/Keyphrase'].to_list()

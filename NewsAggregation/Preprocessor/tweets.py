@@ -27,10 +27,9 @@ def twitter_dataframe_dict(df):
     count  = 0
     cols_list = df.columns.to_list()
     for index, row in df.iterrows():
-        tweet_df[index] = {}
+        tweet_df[str(index)] = {}
         for j in cols_list:
-            tweet_df[index][j] = row[j]
-        print(tweet_df)
+            tweet_df[str(index)][j] = row[j]
         count = count + 1
     return tweet_df
 
@@ -47,12 +46,10 @@ def extract_tweets(keywords,input_start_time = date.today() - timedelta(days=7),
     input_end_time : date ('YYYY-MM-DD')
         End date till tweets needed
     """
-    print(input_end_time,input_start_time)
     count = len(keywords)
     for i in range(len(keywords)):
         temp = keywords[:count:]
         count = count - 1
-        print(temp)
         tweets = pd.DataFrame(itertools.islice(sntwitter.TwitterSearchScraper(f'"{temp} lang:en since:{input_start_time} until:{input_end_time}"').get_items(),10 ))
         if len(tweets) > 0:
             return twitter_dataframe_dict(tweets)
