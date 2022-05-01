@@ -1,11 +1,8 @@
 '''
 Sentiment analysis with finbert Model
 This module consist for sentiments_analysis function which extracts sentiments of the text passed and returns it
-
 Author Parth Shah shah.parth3@northeastern.edu'
-
 Created at 27th April 2022
-
 '''
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, pipeline, AutoModelForTokenClassification
 
@@ -21,8 +18,8 @@ def sentiments_analysis(doc):
         
     '''
     try:
-        tokenizer = AutoTokenizer.from_pretrained("finiteautomata/beto-sentiment-analysis",max_length=512)
-        model = AutoModelForSequenceClassification.from_pretrained("finiteautomata/beto-sentiment-analysis")
+        tokenizer = AutoTokenizer.from_pretrained("finiteautomata/bertweet-base-sentiment-analysis",max_length=512)
+        model = AutoModelForSequenceClassification.from_pretrained("finiteautomata/bertweet-base-sentiment-analysis")
         nlp = pipeline("sentiment-analysis", model = model, tokenizer=tokenizer)
         clean_text= doc.replace("\n", " ")       
         clean_text= ''.join([c for c in clean_text if c != "'"])
@@ -37,4 +34,3 @@ if __name__ == '__main__':
     doc = 'The words are very positive in this sentence'
     return_sentiment = sentiments_analysis(doc)
     assert(return_sentiment[0]['score'] == 0.6004692316055298)
- 
