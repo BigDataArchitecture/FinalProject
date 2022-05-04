@@ -22,7 +22,7 @@ jobs:
           python-version: '3.8'
 
       - name: 💿 Install Zotero2Readwise Python package
-        run: pip install -m requirements.txt
+        run: pip install -r requirements.txt
 
       - name: 🚀 Run Automation
         run: python email_html.py
