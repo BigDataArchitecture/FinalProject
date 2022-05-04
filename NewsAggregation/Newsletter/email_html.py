@@ -70,7 +70,7 @@ def email():
     port = 587  # For starttls
 
     sender_email = "bigdat517+1@gmail.com" # TODO: replace with your email address
-    receiver_email = ["parth981@gmail.com","shah.parth3@northeastern.edu","parigi.s@northeastern.edu","samanta.an@northeastern.edu"] # TODO: replace with your recipients
+    receiver_email = ["parth981@gmail.com"] # TODO: replace with your recipients shah.parth3@northeastern.edu","parigi.s@northeastern.edu","samanta.an@northeastern.edu"
     password = 'syhrkmppaptdfdds'  # TODO: replace with your 16-digit-character password 
 
     # initialise message instance
