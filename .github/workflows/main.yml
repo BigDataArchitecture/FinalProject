@@ -1,9 +1,6 @@
 name: Zotero to Readwise Automation
 
 on:
-  push:
-    branches:
-      - main
   schedule:
     - cron: "*/1 * * * *" # Runs at 03:00 AM (UTC) every Monday, Wednesday, and Friday (Check https://crontab.guru/)
 
