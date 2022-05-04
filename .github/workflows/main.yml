@@ -10,7 +10,9 @@ on:
 jobs:
   zotero-to-readwise-automation:
     runs-on: ubuntu-latest
-    steps:
+    steps:  
+      - name: checkout repo content
+        uses: actions/checkout@v2
       - name: 🍽️ Checkout the repo
         uses: actions/checkout@master
         with:
@@ -25,4 +27,4 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: 🚀 Run Automation
-        run: python email_html.py
+        run: python NewsAggregation/Newsletter/email_html.py
