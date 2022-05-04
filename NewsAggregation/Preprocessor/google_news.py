@@ -17,7 +17,7 @@ Country = ['Australia','Canada ','India ', 'New Zealand', 'Nigeria', 'Pakistan',
 client = pymongo.MongoClient("mongodb+srv://team3:qHovInc8WtqPBs7k@newsmonitor.uzcq9.mongodb.net/UserData?retryWrites=true&w=majority")
 print(client["News"])
 db = client["News"]
-collection = db["GoogleAPI"]
+collection = db["GoogleAPI_links"]
 
 def remove(string):
     return string.replace(" ", "")
@@ -38,6 +38,7 @@ for i in Topics:
                 keywords = keyword_gen(article.summary)
                 tweets = extract_tweets(keywords)
                 collection.insert_one({
+                "news_link" : a[k]['link'],
                 "news_title":article.title,
                 "news_data":article.publish_date,
                 "news_summary":article.summary,

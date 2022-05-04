@@ -18,8 +18,8 @@ def sentiments_analysis(doc):
         
     '''
     try:
-        tokenizer = AutoTokenizer.from_pretrained("finiteautomata/bertweet-base-sentiment-analysis",max_length=512)
-        model = AutoModelForSequenceClassification.from_pretrained("finiteautomata/bertweet-base-sentiment-analysis")
+        tokenizer = AutoTokenizer.from_pretrained("ProsusAI/finbert",max_length=512)
+        model = AutoModelForSequenceClassification.from_pretrained("ProsusAI/finbert")
         nlp = pipeline("sentiment-analysis", model = model, tokenizer=tokenizer)
         clean_text= doc.replace("\n", " ")       
         clean_text= ''.join([c for c in clean_text if c != "'"])
