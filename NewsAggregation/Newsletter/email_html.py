@@ -7,7 +7,9 @@ import ssl
 from bs4 import BeautifulSoup
 import re
 from nltk import tokenize
+import nltk
 import newsletter_data
+nltk.download('punkt')
 
 # def email(news_title,news_sentiment_score,news_sentiment_text,keywords,summary,source,image_link):
 def email():
