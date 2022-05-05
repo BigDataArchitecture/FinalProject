@@ -71,7 +71,7 @@ def email(country = "India ",topic = "Business"):
     port = 587  # For starttls
 
     sender_email = "bigdat517+1@gmail.com" 
-    receiver_email = user_list #shah.parth3@northeastern.edu","parigi.s@northeastern.edu","samanta.an@northeastern.edu"
+    receiver_email =  "parth981@gmail.com" #shah.parth3@northeastern.edu","parigi.s@northeastern.edu","samanta.an@northeastern.edu"
     password = 'syhrkmppaptdfdds' 
 
     # initialise message instance
