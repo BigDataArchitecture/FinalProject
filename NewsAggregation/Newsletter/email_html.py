@@ -35,7 +35,7 @@ def email(country = "India ",topic = "Business"):
     data_columns = ["news_title","news_summary","news_top_image","news_source","news_sentiments","news_link"]
     data_dict = newsletter_data.create_data(country,topic)
 
-    template = open('beefree-lhj0o8hryao.html')
+    template = open('NewsAggregation/Newsletter/beefree-lhj0o8hryao.html')
     soup = BeautifulSoup(template.read(), "html.parser")
     for k in range(1,7):
         news_title = data_dict[str(k-1)][data_columns[0]+str(k)]
