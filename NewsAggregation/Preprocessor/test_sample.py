@@ -25,3 +25,7 @@ def test_sentiment1():
     return_sentiment = sentiment_analysis.sentiments_analysis(doc)
     print(return_sentiment)
     assert(return_sentiment[0]['score'] == 0.6004692912101746)
+    
+def test_extract_tweets(): 
+    result =tweets.extract_tweets(['Elon Musk','Twitter'],'2022-04-20','2022-04-26')
+    assert len(result)>0
