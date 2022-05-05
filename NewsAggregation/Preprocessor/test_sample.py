@@ -1,27 +1,27 @@
+import datetime
+from datetime import date
+from time import strftime
 import google_news
-import tweets
+import tweetss
 import pytest
+import pymongo
+from pymongo import MongoClient
+import sentiment
+import transformers
+
 
 @pytest.fixture
-def topics_list():
-    '''Returns a Wallet instance with a zero balance'''
-    return len(google_news.Topics)>0
+def mongo_connect():
+    google_news.db = [google_news.client["News"], google_news.client["UserData"]]
+    google_news.collection = [google_news.db[0]["GoogleAPI"], google_news.db[0]["GoogleAPI_links"], google_news.db[1]["Google_News"]]
 
-@pytest.fixture
-def country_list():
-    '''Returns a Wallet instance with a zero balance'''
-    return len(google_news.Country)>0
+def test_mongodb_content(mongo_connect):
+    '''Checks if the given connection contains documents inside or not'''
+    for data in google_news.collection:
+        assert data.count_documents({})>0 
 
-# @pytest.fixture
-# def ():
-#     '''Returns a Wallet instance with a zero balance'''
-#     tweets.input_end_time
-#     return len(google_news.Country)>0
-
-def test_topics_nonempty(topics_list):
-    '''Checks whether the given topics list is not empty or not'''
-    assert len(google_news.Topics)>0
-
-def test_country_nonempty(country_list):
-    '''Checks whether the given topics list is not empty or not'''
-    assert len(google_news.Country)>0
+def test_sentiment1():
+    doc = 'The words are very positive in this sentence'
+    return_sentiment = sentiment.sentiments_analysis(doc)
+    print(return_sentiment)
+    assert(return_sentiment[0]['score'] == 0.6004692912101746)
