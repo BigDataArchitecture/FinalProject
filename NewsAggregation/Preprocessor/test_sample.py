@@ -2,11 +2,11 @@ import datetime
 from datetime import date
 from time import strftime
 import google_news
-import tweetss
+import tweets
 import pytest
 import pymongo
 from pymongo import MongoClient
-import sentiment
+import sentiment_analysis
 import transformers
 
 
@@ -22,6 +22,6 @@ def test_mongodb_content(mongo_connect):
 
 def test_sentiment1():
     doc = 'The words are very positive in this sentence'
-    return_sentiment = sentiment.sentiments_analysis(doc)
+    return_sentiment = sentiment_analysis.sentiments_analysis(doc)
     print(return_sentiment)
     assert(return_sentiment[0]['score'] == 0.6004692912101746)
