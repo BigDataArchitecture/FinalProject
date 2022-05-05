@@ -1,14 +1,35 @@
+'''
+Data fetching for our news letter
+This module consist of data fetching of our newsletter for automated email 
+
+Author Parth Shah shah.parth3@northeastern.edu'
+Created at 4th May 2022
+'''
+
 import pymongo
 import pandas as pd
 
 
-def create_data():
+def create_data(country,topic):
+    '''
+    This Function loads the data from our newsletter_data module and makes the template for our newsletter
+    This is a customized function which takes in country and topic as input and select the data likewise
+    Parameters:
+    ---------------------
+    country: string
+        Name of the country for which news should be fetched
+        Default: India🇮🇳
+    topic: string
+        Topic of the news for which news should be fetched
+        Default: Business
+    '''
+
     client = pymongo.MongoClient("mongodb+srv://team3:qHovInc8WtqPBs7k@newsmonitor.uzcq9.mongodb.net/UserData?retryWrites=true&w=majority")
     print(client["News"])
     db = client["News"]
     collection = db["GoogleAPI_links"]
 
-    myquery = {"news_Country": "Australia"}
+    myquery = {"news_Country": country ,"news_topic": topic }
     mydoc = collection.find(myquery)
 
     data_dict = {}

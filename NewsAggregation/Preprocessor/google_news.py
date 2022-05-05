@@ -6,6 +6,7 @@ from sentiment_analysis import sentiments_analysis
 from keyword_generation import keyword_gen
 from tweets import extract_tweets
 
+
 nltk.download('punkt')
 from newspaper import Article
 

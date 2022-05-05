@@ -33,4 +33,5 @@ def sentiments_analysis(doc):
 if __name__ == '__main__':
     doc = 'The words are very positive in this sentence'
     return_sentiment = sentiments_analysis(doc)
+    print("done")
     assert(return_sentiment[0]['score'] == 0.6004692316055298)
