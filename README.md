@@ -94,9 +94,15 @@ Checkout our Application Demo:
  python3 google_news.py
  ```
  
- 
- 
- 
+
+# Deployment Details:
+
+Language: Python, HTML, CSS
+Container: Docker, AWS ECR
+Cloud ecosystems: AWS, MongoDB Atlas
+Cloud tools: AWS Lambda, AWS Cloudwatch, AWS Gateway
+Tools for analysis:Anaconda Spyder, MongoDB Atlas
+Other tools and frameworks: FastAPI, Pytest, Streamlit, Airflow
  
  # References:
  Sentiment Analysis: https://arxiv.org/pdf/2007.02238.pdf
