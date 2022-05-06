@@ -1,0 +1,16 @@
+service: serverless-bert-summarization-docker
+
+provider:
+  name: aws # provider
+  region: us-east-1 # aws region
+  memorySize: 3008 # optional, in MB, default is 1024
+  timeout: 600 # optional, in seconds, default is 6
+
+functions:
+  questionanswering:
+    image: 430731586545.dkr.ecr.us-east-1.amazonaws.com/sumarization-lambda:latest #ecr url
+    events:
+      - http:
+          path: qa # http path
+          method: post # http method
+          digest: sha256:7493445e8c2f46d17f855d9af6cdeed3a7cab71c9272f6fe3b5271a39fda28bc

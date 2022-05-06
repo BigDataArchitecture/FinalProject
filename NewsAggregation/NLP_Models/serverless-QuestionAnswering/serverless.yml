@@ -1,0 +1,20 @@
+org: parth71196
+app: serverless-bert-lambda-docker
+service: serverless-bert-lambda-docker
+
+provider:
+  name: aws # provider
+  region: us-east-1 # aws region
+  memorySize: 3008 # optional, in MB, default is 1024
+  timeout: 30 # optional, in seconds, default is 6
+
+functions:
+  questionanswering:
+    image: 430731586545.dkr.ecr.us-east-1.amazonaws.com/bert-summarization:latest #ecr url
+    events:
+      - http:
+          path: qa # http path
+          method: post # http method
+
+
+          
