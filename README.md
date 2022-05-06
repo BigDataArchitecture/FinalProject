@@ -18,6 +18,8 @@ News is one of the most important things in most peoples' lives. On most days of
 
 https://share.streamlit.io/shahparth0007/finalprojectstreamlit/main/Pages/streamlit.py
 
+Username: Parth Passoword: parth for streamlit
+
 # Architecture
 <img src= https://github.com/BigDataArchitecture/FinalProject/blob/main/Images/architecture_final.png />
 
