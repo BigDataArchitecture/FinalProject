@@ -89,7 +89,7 @@ default_args = {
 with DAG('Google_News',
          catchup=False,
          default_args=default_args,
-         schedule_interval='0 * * * *',
+         schedule_interval='0 8 * * *',
          ) as dag:
     t0_start = PythonOperator(task_id='UploadModels',
                               python_callable=start)
