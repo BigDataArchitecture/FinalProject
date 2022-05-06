@@ -25,4 +25,4 @@ pytest
 transformers
 keybert
 snscrape
-newspaper
+newspaper3k
