@@ -94,6 +94,10 @@ Checkout our Application Demo:
  python3 google_news.py
  ```
  
+# Our PPT:
+
+https://docs.google.com/presentation/d/1yN3BY39aH6dPyoDo_71GwboyNewaBl_YKw2iuTmHwtI/edit#slide=id.g127f136aaf4_5_3
+
 
 # Deployment Details:
 
