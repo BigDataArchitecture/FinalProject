@@ -29,7 +29,7 @@ The Twitter fetcher collects the posts (tweets) using the streaming Twitter API 
 
 **2. Extractor**
 
-The output of the news fetcher component, as illustrated, is provided to the extractor component. This component is responsible for processing the HTML data and extracting the main content of the article automatically. It does so by using the python readability
+The output of the news fetcher component, as illustrated, is provided to the extractor component. This component is responsible for processing the HTML data and extracting the main content of the article automatically. It does so by using the python readability.
 
 **3. Pre processor**
 
