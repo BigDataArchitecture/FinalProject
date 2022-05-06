@@ -18,7 +18,7 @@ Country = ['Australia','Canada ','India ', 'New Zealand', 'Nigeria', 'Pakistan',
 client = pymongo.MongoClient("mongodb+srv://team3:qHovInc8WtqPBs7k@newsmonitor.uzcq9.mongodb.net/UserData?retryWrites=true&w=majority")
 print(client["News"])
 db = client["News"]
-collection = db["GoogleAPI_links"]
+collection = db["GoogleAPI_links_2"]
 
 def remove(string):
     return string.replace(" ", "")
