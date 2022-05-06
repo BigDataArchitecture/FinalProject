@@ -21,3 +21,4 @@ tqdm==4.64.0
 urllib3==1.26.9
 nltk
 bs4
+pytest
