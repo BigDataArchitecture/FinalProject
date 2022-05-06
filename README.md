@@ -15,7 +15,7 @@ News is one of the most important things in most peoples' lives. On most days of
 5. As a user I want a aggregate place where news from all channels are present
 
 # Architecture
-<img src="https://github.com/BigDataArchitecture/FinalProject/blob/main/Images/NewsAggregation.jpg" width="1000" height="600" />
+<img src= https://github.com/BigDataArchitecture/FinalProject/blob/main/Images/architecture.png />
 
 **1. News Fetcher and Twitter Fetcher**
 
