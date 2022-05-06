@@ -19,7 +19,7 @@ News is one of the most important things in most peoples' lives. On most days of
 https://share.streamlit.io/shahparth0007/finalprojectstreamlit/main/Pages/streamlit.py
 
 # Architecture
-<img src= https://github.com/BigDataArchitecture/FinalProject/blob/main/Images/architecture.png />
+<img src= https://github.com/BigDataArchitecture/FinalProject/blob/main/Images/architecture_final.png />
 
 **1. News Fetcher and Twitter Fetcher**
 
