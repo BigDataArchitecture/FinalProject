@@ -10,6 +10,7 @@ import sentiment_analysis
 import transformers
 
 
+
 @pytest.fixture
 def mongo_connect():
     google_news.db = [google_news.client["News"], google_news.client["UserData"]]
