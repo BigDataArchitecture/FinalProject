@@ -14,6 +14,10 @@ News is one of the most important things in most peoples' lives. On most days of
 4. As a user I am looking for a particular question and want to see all related articles to it
 5. As a user I want a aggregate place where news from all channels are present
 
+# Access our Streamlit Application:
+
+https://share.streamlit.io/shahparth0007/finalprojectstreamlit/main/Pages/streamlit.py
+
 # Architecture
 <img src= https://github.com/BigDataArchitecture/FinalProject/blob/main/Images/architecture.png />
 
@@ -43,10 +47,58 @@ The Pre Processor module performs various NLP tasks that include tokenization, d
 
 #### Value: After all preprocessing the value is what customers will look on screen
 
+
+Checkout our Application Demo: 
+
+
  # Our Processor Module:
  <img alt="GIF" src="Images/Processor_module.jpg" width="1000" height="600" />
+ 
+ 
+ # How to run our Project
+ 
+ ## 1) To run Streamlit
+ 
+ ```
+ git clone https://github.com/shahparth0007/FinalProjectStreamlit.git
+ 
+ pip3 install -m requirements.txt
+ 
+ cd Pages
+ 
+ streamlit run streamlit.py
+ ```
+ 
+ Username: Parth Passoword: parth for streamlit 
+ ## 2) To run FASTApi for preprocessor
+ 
+ ```
+ git clone https://github.com/BigDataArchitecture/FinalProject.git
+ 
+ pip3 install -m requirements.txt
+ 
+ cd NewsAggregation
+ cd Preprocessor
+ python3 main.py
+ 
+ ```
+  ## 3) To Save the data in MongoDB 
+  
+  1) Create a mongoDB account @ https://www.mongodb.com
+  2) Create a Database called "Newsmonitor"
+  3) Get the connection link from "Security > Database Access"
+  4) Replace the connection Link in "google_news.py"
+ ``` 
+ cd NewsAggregation
+ cd Preprocessor
+ python3 google_news.py
+ ```
+ 
+ 
  
  
  
  # References:
  Sentiment Analysis: https://arxiv.org/pdf/2007.02238.pdf
+ 
+ 
