@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-NewsAggregation/Streamlit
 # C extensions
 *.so
 node_modules
