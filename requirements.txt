@@ -228,7 +228,7 @@ webencodings==0.5.1
 Werkzeug==1.0.1
 widgetsnbextension==3.6.0
 wrapt==1.14.1
-WTForms==3.0.1
+WTForms<3.0.0
 zipp==3.8.0
 matplotlib
 streamlit_authenticator
