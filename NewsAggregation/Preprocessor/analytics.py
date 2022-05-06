@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import plotly.express as px
 import plost
 
+
 def analytics(user1):
 
 
