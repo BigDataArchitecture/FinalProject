@@ -1,9 +1,12 @@
 name: Newsletter Automation
 
+# on:
+#   schedule:
+#     - cron: '0 10 * * *' # Runs at 10:00 AM (UTC) every Day (Check https://crontab.guru/)
 on:
-  schedule:
-    - cron: '0 10 * * *' # Runs at 10:00 AM (UTC) every Day (Check https://crontab.guru/)
-
+  push:
+    branches:
+      - main
 jobs:
   news-letter-automation:
     runs-on: ubuntu-latest
